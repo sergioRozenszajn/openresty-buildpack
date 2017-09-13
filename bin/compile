@@ -48,9 +48,9 @@ cp -f $compile_buildpack_dir/conf/nginx.conf openresty/nginx/conf/nginx.conf
 cp -f $compile_buildpack_dir/conf/mime.types openresty/nginx/conf/mime.types
 cp -f $compile_buildpack_dir/conf/gzip.types openresty/nginx/conf/gzip.types
 
-cd $build_dir
+cd openresty/nginx
 pwd
-openresty/nginx/configure --with-http_auth_request_module 
+configure --with-http_auth_request_module 
 
 mkdir -p openresty/nginx/cache/tmp
 
