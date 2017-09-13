@@ -43,7 +43,7 @@ shopt -u dotglob
 
 status "Setting up nginx"
 tar xzf $compile_nginx_tgz
-./configure --with-http_auth_request_module 
+cp ./configure --with-http_auth_request_module 
 cp -f $compile_buildpack_dir/conf/nginx.conf openresty/nginx/conf/nginx.conf
 cp -f $compile_buildpack_dir/conf/mime.types openresty/nginx/conf/mime.types
 cp -f $compile_buildpack_dir/conf/gzip.types openresty/nginx/conf/gzip.types
